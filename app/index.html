@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>D&D Package Editor</title>
+    <link href="bootstrap/css/bootstrap-paper.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row top-row">
+        <div class="col-sm-12">
+          <h1>D&D Package Editor</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2">
+          <ul class="nav nav-pills nav-stacked" id="main-nav">
+            <li class="active" data-page-link="basic-package-info"><a href="#">Basic</a></li>
+            <li class="disabled"><a href="#">Races</a></li>
+            <li class="disabled"><a href="#">Classes</a></li>
+            <li class="disabled"><a href="#">Feats</a></li>
+            <li class="disabled"><a href="#">Skills</a></li>
+            <li class="disabled"><a href="#">Spell Lists</a></li>
+            <li class="disabled"><a href="#">Spells</a></li>
+            <li class="disabled"><a href="#">Languages</a></li>
+            <li class="disabled"><a href="#">Items</a></li>
+          </ul>
+        </div>
+        
+        <!--
+        ========================================================================
+        Basic Package Information
+        ========================================================================
+        -->
+        
+        <div class="col-sm-10" id="basic-package-info">
+          <h2>Basic Package Information</h2>
+          <ul class="breadcrumb">
+            <li class="active">Basic Package Information</li>
+          </ul>
+          <form class="form-horizontal">
+            <fieldset>
+              <div class="form-group">
+                <label for="name" class="col-sm-2 control-label">Name</label>
+                <div class="col-sm-9">
+                  <input class="form-control" id="name" placeholder="a-unique-name" type="text">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="title" class="col-sm-2 control-label">Title</label>
+                <div class="col-sm-9">
+                  <input class="form-control" id="title" placeholder="A Unique Title" type="text">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="description" class="col-sm-2 control-label">Description</label>
+                <div class="col-sm-9">
+                  <textarea class="form-control" rows="3" id="description" placeholder="This package contains..."></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="homepage" class="col-sm-2 control-label">Homepage</label>
+                <div class="col-sm-9">
+                  <input class="form-control" id="homepage" placeholder="http://www.example.com/" type="text">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="version" class="col-sm-2 control-label">Version</label>
+                <div class="col-sm-9">
+                  <input class="form-control" id="version" placeholder="1.0.0" type="text">
+                </div>
+              </div>    
+              <div class="form-group">
+                <label for="licenses" class="col-sm-2 control-label">License</label>
+                <div class="col-sm-9">
+                  <select class="form-control" id="licenses">
+                    <option>Open Game License v 1.0</option>
+                    <option>Creative Commons Attribution 4.0 International</option>
+                    <option>Creative Commons Attribution-ShareAlike 4.0 International</option>
+                    <option>Creative Commons Attribution-NoDerivatives 4.0 International</option>
+                    <option>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</option>
+                    <option>Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</option>
+                    <option>All Rights Reserved</option>
+                    <option>Creative Commons Zero</option>
+                    <option>Free Art License 1.3</option>
+                  </select>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+          <label for="maintainers" class="col-sm-2 control-label">Maintainers</label>
+          <ul class="list-group col-sm-9" id="maintainers" data-page-link="maintainers-list">
+            <li class="list-group-item">
+              <span class="badge" id="maintainers-number">0</span>
+              Click to edit list of maintainers
+            </li>
+          </ul>
+          <label for="sources" class="col-sm-2 control-label">Sources</label>
+          <ul class="list-group col-sm-9" id="sources" data-page-link="sources-list">
+            <li class="list-group-item">
+              <span class="badge" id="sources-number">0</span>
+              Click to edit list of sources
+            </li>
+          </ul>
+          </ul>
+        </div>
+        
+        <!--
+        ========================================================================
+        Maintainers List
+        ========================================================================
+        -->
+        
+        <div class="col-sm-10" id="maintainers-list">
+          <h2>Maintainers</h2>
+          <ul class="breadcrumb">
+            <li data-page-link="basic-package-info"><a href="#">Basic Package Information</a></li>
+            <li class="active">Maintainers</li>
+          </ul>
+          
+          <table class="table table-striped table-hover ">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td><span class="glyphicon glyphicon-pencil"></span>
+                    <span class="glyphicon glyphicon-trash"></span></td>
+              </tr>
+              <tr>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td><span class="glyphicon glyphicon-pencil"></span>
+                    <span class="glyphicon glyphicon-trash"></span></td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <a href="#" class="btn btn-primary btn-sm" data-page-link="new-maintainer">New Maintainer <span class="glyphicon glyphicon-plus-sign"></span></a>
+        </div>
+        
+        
+        <div class="col-sm-10" id="new-maintainer">
+          <h2>New Maintainer</h2>
+          <ul class="breadcrumb">
+            <li data-page-link="basic-package-info"><a href="#">Basic Package Information</a></li>
+            <li data-page-link="maintainers-list"><a href="#">Maintainers</a></li>
+            <li class="active">New Maintainer</li>
+          </ul>
+          <form class="form-horizontal" style="margin-bottom: 30px;">
+            <fieldset>
+              <div class="form-group">
+                <label for="new-maintainer-name" class="col-sm-2 control-label">Name</label>
+                <div class="col-sm-9">
+                  <input class="form-control" id="new-maintainer-name" placeholder="John Doe" type="text">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="new-maintainer-email" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-9">
+                  <input class="form-control" id="new-maintainer-email" placeholder="john.doe@example.com" type="text">
+                </div>
+              </div>
+            </fieldset>
+          </form>
+          <a href="#" class="btn btn-primary btn-sm">Add Maintainer <span class="glyphicon glyphicon-ok"></span></a>
+          <a href="#" class="btn btn-default btn-sm" data-page-link="maintainers-list">Cancel <span class="glyphicon glyphicon-remove"></span></a>
+        </div>
+        
+        <!--
+        ========================================================================
+        Sources List
+        ========================================================================
+        -->
+        
+        <div class="col-sm-10" id="sources-list">
+          <h2>Sources</h2>
+          <ul class="breadcrumb">
+            <li data-page-link="basic-package-info"><a href="#">Basic Package Information</a></li>
+            <li class="active">Sources</li>
+          </ul>
+          
+          
+          
+          <table class="table table-striped table-hover ">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>URL</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td><span class="glyphicon glyphicon-pencil"></span>
+                    <span class="glyphicon glyphicon-trash"></span></td>
+              </tr>
+              <tr>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td><span class="glyphicon glyphicon-pencil"></span>
+                    <span class="glyphicon glyphicon-trash"></span></td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <a href="#" class="btn btn-primary btn-sm">New Source <span class="glyphicon glyphicon-plus-sign"></span></a>
+        </div>
+        
+      </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "{3ecce910-8a68-4681-a29e-9c0e805c42f8}",
+  "description": "Package creator and editor for D&D character sheet generator.",
+  "main": "app/index.html",
+  "version": "0.1.0",
+  "window": {
+    "title": "D&D Package Creator",
+    "toolbar": true,
+    "width": 800,
+    "min_width": 768
+  }
+}
